@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gradient-to-r from-slate-900 to-black text-white ">
         <Navbar />
-        <div className="py-16 px-10">{children}</div>
+        <div className="py-14 px-10">{children}</div>
       </body>
     </html>
   );
