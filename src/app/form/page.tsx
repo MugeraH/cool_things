@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod"
+import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { z } from "zod";
 type Props = {};
@@ -31,9 +31,9 @@ type UserForm = z.infer<typeof userFormSchema>;
 // };
 
 function SampleForm({}: Props) {
-  const form = useForm<UserForm>({
-    resolver:zodResolver(userFormSchema)
-  });
+  // const form = useForm<UserForm>({
+  //   resolver:zodResolver(userFormSchema)
+  // });
   return <div>SampleForm</div>;
 }
 
