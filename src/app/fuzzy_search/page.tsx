@@ -14,6 +14,7 @@ const options = {
 
 function FuzzySearch({}: Props) {
   const [inputValue, setInputValue] = React.useState("");
+  const [resultData, setResultData] = React.useState<any[]>();
 
   const { results } = useFuseSearch(heroData!, inputValue, options);
 
@@ -38,38 +39,85 @@ function FuzzySearch({}: Props) {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">
-          {results.map((hero) => (
-            <div
-              key={hero.item?.name}
-              className="flex gap-2 border-2 p-3 rounded-sm"
-            >
-              <div className="h-14 w-16 rounded-sm ">
-                <Image
-                  src={hero.item.picture!}
-                  width={60}
-                  height={60}
-                  objectFit="cover"
-                  className="relative rounded-full"
-                  alt="logo"
-                />
-              </div>
+          {results.length >= 1 ? (
+            <>
+              {results?.map((hero) => (
+                <div
+                  key={hero.item?.name}
+                  className="flex gap-2 border-2 p-3 rounded-sm"
+                >
+                  <div className="h-14 w-16 rounded-sm ">
+                    <Image
+                      src={hero.item.picture!}
+                      width={60}
+                      height={60}
+                      objectFit="cover"
+                      className="relative rounded-full"
+                      alt="logo"
+                    />
+                  </div>
 
-              <div className="flex flex-col">
-                <h4>
-                  <span className="text-slate-400 text-xs">Hero Name : </span>
-                  {hero.item.name}
-                </h4>
-                <h5>
-                  <span className="text-slate-400 text-xs">Power : </span>
-                  {hero.item.superpower}
-                </h5>
-                <h5>
-                  <span className="text-slate-400 text-xs">Hero Age : </span>
-                  {hero.item.age}
-                </h5>
-              </div>
-            </div>
-          ))}
+                  <div className="flex flex-col">
+                    <h4>
+                      <span className="text-slate-400 text-xs">
+                        Hero Name :{" "}
+                      </span>
+                      {hero.item.name}
+                    </h4>
+                    <h5>
+                      <span className="text-slate-400 text-xs">Power : </span>
+                      {hero.item.superpower}
+                    </h5>
+                    <h5>
+                      <span className="text-slate-400 text-xs">
+                        Hero Age :{" "}
+                      </span>
+                      {hero.item.age}
+                    </h5>
+                  </div>
+                </div>
+              ))}
+            </>
+          ) : (
+            <>
+              {heroData?.map((hero) => (
+                <div
+                  key={hero?.name}
+                  className="flex gap-2 border-2 p-3 rounded-sm"
+                >
+                  <div className="h-14 w-16 rounded-sm ">
+                    <Image
+                      src={hero.picture!}
+                      width={60}
+                      height={60}
+                      objectFit="cover"
+                      className="relative rounded-full"
+                      alt="logo"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <h4>
+                      <span className="text-slate-400 text-xs">
+                        Hero Name :{" "}
+                      </span>
+                      {hero.name}
+                    </h4>
+                    <h5>
+                      <span className="text-slate-400 text-xs">Power : </span>
+                      {hero.superpower}
+                    </h5>
+                    <h5>
+                      <span className="text-slate-400 text-xs">
+                        Hero Age :{" "}
+                      </span>
+                      {hero.age}
+                    </h5>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
         </div>
       </div>
     </Container>
