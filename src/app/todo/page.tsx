@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { motion, AnimatePresence, useIsPresent } from "framer-motion";
-import { div } from "framer-motion/client";
-type Props = {};
+
 
 let x = 3;
-function Todo({}: Props) {
+function Todo() {
   type Todo = {
     name: string;
     isComplete: boolean;

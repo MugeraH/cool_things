@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
-type Props = {};
 
-function Hero({}: Props) {
+
+
+function Hero(
+  
+) {
   return (
     <div
       className=" flex   min-h-[670px]  bg-cover bg-center  bg-blend-overlay bg-no-repeat flex-col items-center justify-between p-24 relative"

@@ -5,8 +5,6 @@ import React from "react";
 // @ts-ignore
 import MiniSearch from "minisearch";
 
-type Props = {};
-
 const heroData = [
   {
     id: 1,
@@ -90,7 +88,7 @@ const miniSearchOptions = {
   },
 };
 
-function FuzzySearch({}: Props) {
+function FuzzySearch() {
   const [inputValue, setInputValue] = React.useState("");
 
   // const { results, search, searchIndex } = useSearchIndex(

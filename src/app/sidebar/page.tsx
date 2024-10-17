@@ -12,8 +12,6 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-type Props = {};
-
 const Sidepanel = () => {
   const [open, setOpen] = React.useState(true);
   const [selected, setSelected] = React.useState("View site");
@@ -206,7 +204,7 @@ const ToggleClose = ({
 
 const Mainpanel = () => <div className="    w-full">Main</div>;
 
-function Sidebar({}: Props) {
+function Sidebar() {
   // h-[80vh] w-full bg-green-200
   return (
     <div

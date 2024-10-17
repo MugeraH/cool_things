@@ -2,15 +2,13 @@
 import React from "react";
 import { JSONContent } from "novel";
 import { generateHTML } from "@tiptap/html";
-import StarterKit from "@tiptap/starter-kit";
+
 import Editor from "@/components/Editor/AdvancedEditor";
 import { Card, CardContent } from "@/components/ui/card";
 import { defaultValue } from "./default-value";
-import { parse } from "path";
 
 import { defaultExtensions } from "@/components/Editor/extensions";
 import { slashCommand } from "@/components/Editor/slash-command";
-import { Content } from "@radix-ui/react-popover";
 
 type Props = {};
 
@@ -18,8 +16,6 @@ const extensions = [...defaultExtensions, slashCommand];
 
 function EditorV2({}: Props) {
   const [value, setValue] = React.useState<JSONContent>(defaultValue);
-
-
 
   const renderContent = (content: JSONContent) => {
     return generateHTML(content, extensions);

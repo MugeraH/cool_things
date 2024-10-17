@@ -18,6 +18,7 @@ export const TextButtons = () => {
     {
       name: "bold",
       isActive: (editor) => editor.isActive("bold"),
+      // @ts-ignore
       command: (editor) => editor.chain().focus().toggleBold().run(),
       icon: BoldIcon,
     },
@@ -42,6 +43,7 @@ export const TextButtons = () => {
     {
       name: "code",
       isActive: (editor) => editor.isActive("code"),
+      // @ts-ignore
       command: (editor) => editor.chain().focus().toggleCode().run(),
       icon: CodeIcon,
     },

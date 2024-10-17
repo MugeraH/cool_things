@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-function CoolCards({}: Props) {
+function CoolCards() {
   return <div>CoolCards</div>;
 }
 

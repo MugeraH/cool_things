@@ -1,8 +1,7 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+// import { useForm } from "react-hook-form";
+// import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { z } from "zod";
-type Props = {};
 
 const userFormSchema = z.object({
   //    optional() --makes property optional
@@ -18,7 +17,7 @@ const userFormSchema = z.object({
   }),
 });
 
-type UserForm = z.infer<typeof userFormSchema>;
+// type UserForm = z.infer<typeof userFormSchema>;
 // const user = {
 //   firstName: "Hughes",
 //   email: "contact@gmail.com",
@@ -30,7 +29,7 @@ type UserForm = z.infer<typeof userFormSchema>;
 //   },
 // };
 
-function SampleForm({}: Props) {
+function SampleForm() {
   // const form = useForm<UserForm>({
   //   resolver:zodResolver(userFormSchema)
   // });

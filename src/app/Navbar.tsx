@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { Camera, Apple, Drill } from "lucide-react";
+import { Drill } from "lucide-react";
 type Props = {};
 
 export default function Navbar({}: Props) {

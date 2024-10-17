@@ -3,7 +3,7 @@ import React from "react";
 import NovelEditor from "@/components/Editor/NovelEditor";
 import { Card, CardContent } from "@/components/ui/card";
 import parse from "html-react-parser";
-import { useScroll } from "framer-motion";
+// import { useScroll } from "framer-motion";
 
 function EditorComponent() {
   const [content, setContent] = React.useState("");

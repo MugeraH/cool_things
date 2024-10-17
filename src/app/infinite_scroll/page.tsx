@@ -6,9 +6,7 @@ import { Dot } from "lucide-react";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-type Props = {};
-
-function InifiniteScroll({}: Props) {
+function InifiniteScroll() {
   const { data, status, error, fetchNextPage, isFetching } = useInfiniteQuery({
     queryKey: ["items"],
     queryFn: fetchItems,

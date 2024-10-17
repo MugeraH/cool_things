@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { div } from "framer-motion/client";
+
 import Container from "@/components/Container";
-type Props = {};
+
 let tabs = [
   {
     id: "world",
@@ -62,7 +62,7 @@ let tabs = [
   },
 ];
 
-function Tabs({}: Props) {
+function Tabs() {
   let [activeTab, setActiveTab] = React.useState(tabs[0].id);
   return (
     <Container>

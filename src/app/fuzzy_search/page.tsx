@@ -6,15 +6,13 @@ import Fuse from "fuse.js";
 import { heroData } from "./data";
 import useFuseSearch from "./useFuseSearch";
 
-type Props = {};
-
 const options = {
   keys: ["name", "superpower", "age"],
 };
 
-function FuzzySearch({}: Props) {
+function FuzzySearch() {
   const [inputValue, setInputValue] = React.useState("");
-  const [resultData, setResultData] = React.useState<any[]>();
+  // const [resultData, setResultData] = React.useState<any[]>();
 
   const { results } = useFuseSearch(heroData!, inputValue, options);
 

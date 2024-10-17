@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {
+  title: string;
+  setContent: React.Dispatch<React.SetStateAction<string>>;
+};
 
-function NovelEditor({}: Props) {
+function NovelEditor({ setContent, title }: Props) {
   return (
-    <div>NovelEditor</div>
-  )
+    <div>
+      NovelEditor
+      <button onClick={() => setContent("")}>{title}</button>
+    </div>
+  );
 }
 
-export default NovelEditor
-
+export default NovelEditor;
 
 // import React from "react";
 // import { Editor } from "novel";
