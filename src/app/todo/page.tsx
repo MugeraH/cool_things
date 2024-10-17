@@ -42,51 +42,7 @@ function Todo({}: Props) {
 
   return (
     <div className="max-w-[90%] mx-auto px-2 pt-20 md:max-w-[60rem] md:px-8">
-      <div className="flex justify-end">
-        <button
-          onClick={addTodo}
-          className=" rounded px-3 text-sm py-1 bg-green-400"
-        >
-          Add
-        </button>{" "}
-      </div>
-
-      <ul className="mt-8 border p-8 rounded-lg overflow-hidden">
-        <AnimatePresence initial={false}>
-          {todos.map((todo) => (
-            <motion.li
-              key={todo}
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{
-                opacity: { duration: 0.2 },
-                height: { duration: 0.4 },
-              }}
-              //   transition={{ layout: { type: "spring" } }}
-            >
-              <div className=" flex justify-between items-center border-b  py-2">
-                <span> Todo {todo}</span>
-                <button
-                  className="border rounded w-8 h-7"
-                  onClick={() => removeTodo(todo)}
-                >
-                  &times;
-                </button>
-              </div>
-            </motion.li>
-          ))}
-        </AnimatePresence>
-      </ul>
-
-      <div className="mt-8">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-          voluptate. Itaque magnam, nam veritatis odit debitis sapiente veniam,
-          architecto dignissimos eaque harum, explicabo quidem dolor rem. Culpa
-          similique provident rerum!
-        </p>
-      </div>
+    
 
       {/* tables */}
 

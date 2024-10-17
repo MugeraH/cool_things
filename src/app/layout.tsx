@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import Providers from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-to-r from-slate-900 to-black text-white ">
-        <Navbar />
-        <div className="py-14 px-10">{children}</div>
+        <Providers>
+          <Navbar />
+          <div className="py-14 px-10">{children}</div>
+        </Providers>
       </body>
     </html>
   );

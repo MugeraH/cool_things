@@ -1,7 +1,15 @@
 import MainContent from "@/components/MainContent";
 
 export default function Home() {
-  const myLinks = ["tabs", "todo", "form", "fuzzy_search"];
+  const myLinks = [
+    "tabs",
+    "todo",
+    "form",
+    "fuzzy_search",
+    "infinite_scroll",
+    "wysiwyg_editor",
+    "sidebar",
+  ];
   return (
     <main className=" flex flex-col items-center justify-between py-16 px-10">
       <div className="  w-full relative flex flex-col gap-10">

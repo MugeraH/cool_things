@@ -21,11 +21,11 @@ function MainContent({ links }: Props) {
   return (
     <>
       {links.map((link) => (
-        <Spotlight key={link} className="w-full h-[300px] ">
+        <Spotlight key={link} className="w-full h-[200px] ">
           {/* Card #1 */}
           <SpotlightCard>
             <Link className="text-white " href={`/${link}`}>
-              <div className=" h-full bg-slate-900 p-6 pb-8  z-20 overflow-hidden flex justify-center items-center">
+              <div className=" h-full bg-slate-900 p-6 pb-8 capitalize z-20 overflow-hidden flex justify-center items-center">
                 {link}
               </div>
             </Link>
