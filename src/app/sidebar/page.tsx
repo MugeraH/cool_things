@@ -18,6 +18,9 @@ const Sidepanel = () => {
   return (
     <motion.nav
       layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.125 }}
       className="sticky top-0 h-[90vh] shrink-0 border-r border-slate-300 bg-white p-2 "
       style={{ width: open ? "225px" : "fit-content" }}
     >
@@ -85,6 +88,9 @@ const Option = ({
   return (
     <motion.button
       layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.125 }}
       className={`relative flex h-10 w-full items-center rounded-md transition-colors ${
         selected === title
           ? "bg-indigo-100 text-indigo-800"
@@ -94,13 +100,22 @@ const Option = ({
     >
       <motion.div
         layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.125 }}
         className="grid h-full w-10 place-content-center text-lg"
       >
         <Icon />
       </motion.div>
 
       {open && (
-        <motion.span layout className="text-xs font-medium">
+        <motion.span
+          layout
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.125 }}
+          className="text-xs font-medium"
+        >
           {title}
         </motion.span>
       )}
@@ -108,7 +123,10 @@ const Option = ({
       {notifs && open && (
         <motion.span
           layout
-          style={{ transform: "translateY(-50%)" }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          style={{ y: "-50%" }}
+          transition={{ delay: 0.5 }}
           className="absolute right-2 top-1/2 size-4 rounded bg-indigo-500 text-[10px] text-white"
         >
           {notifs}
@@ -120,7 +138,13 @@ const Option = ({
 
 const TitleSection = ({ open }: { open: boolean }) => {
   return (
-    <motion.div layout className="mb-3 border-b border-slate-300 pb-3">
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.125 }}
+      className="mb-3 border-b border-slate-300 pb-3"
+    >
       <div className="flex cursor-pointer items-center justify-between rounded-md transition-colors hover:bg-slate-100">
         <div className="flex items-center gap-2">
           <Logo />
@@ -128,11 +152,20 @@ const TitleSection = ({ open }: { open: boolean }) => {
             <div>
               <motion.span
                 layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.125 }}
                 className="block text-xs font-semibold text-black"
               >
                 GirlOnFire
               </motion.span>
-              <motion.span layout className="block text-xs text-slate-500">
+              <motion.span
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.125 }}
+                className="block text-xs text-slate-500"
+              >
                 Pro Plane
               </motion.span>
             </div>
@@ -149,6 +182,9 @@ const Logo = () => {
   return (
     <motion.div
       layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.125 }}
       className="grid size-10 shrink-0 place-content-center rounded-md shadow-lg"
     >
       <svg
@@ -206,7 +242,13 @@ const ToggleClose = ({
 };
 
 const Mainpanel = () => (
-  <motion.div layout className=" p-4    w-full">
+  <motion.div
+    layout
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.2 }}
+    className=" p-4    w-full"
+  >
     Main
   </motion.div>
 );
