@@ -6,7 +6,7 @@ import {
   Apple,
   Anchor,
   Atom,
-  ChartNoAxesColumnIncreasing,
+  PanelsTopLeft,
   ChevronsRight,
   Users,
 } from "lucide-react";
@@ -50,7 +50,7 @@ const Sidepanel = () => {
         />
 
         <Option
-          Icon={ChartNoAxesColumnIncreasing}
+          Icon={PanelsTopLeft}
           title="Analytics"
           selected={selected}
           setSelected={setSelected}
@@ -128,10 +128,15 @@ const TitleSection = ({ open }: { open: boolean }) => {
           <Logo />
           {open && (
             <div>
-              <motion.span layout className="block text-xs font-semibold text-black">
+              <motion.span
+                layout
+                className="block text-xs font-semibold text-black"
+              >
                 GirlOnFire
               </motion.span>
-              <motion.span layout className="block text-xs text-slate-500">Pro Plane</motion.span>
+              <motion.span layout className="block text-xs text-slate-500">
+                Pro Plane
+              </motion.span>
             </div>
           )}
         </div>
