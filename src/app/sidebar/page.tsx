@@ -147,7 +147,10 @@ const TitleSection = ({ open }: { open: boolean }) => {
 
 const Logo = () => {
   return (
-    <div className="grid size-10 shrink-0 place-content-center rounded-md shadow-lg">
+    <motion.div
+      layout
+      className="grid size-10 shrink-0 place-content-center rounded-md shadow-lg"
+    >
       <svg
         id="logo-35"
         width="24"
@@ -168,7 +171,7 @@ const Logo = () => {
           fill="#312ECB"
         ></path>{" "}
       </svg>
-    </div>
+    </motion.div>
   );
 };
 
@@ -202,7 +205,11 @@ const ToggleClose = ({
   );
 };
 
-const Mainpanel = () => <div className="    w-full">Main</div>;
+const Mainpanel = () => (
+  <motion.div layout className=" p-4    w-full">
+    Main
+  </motion.div>
+);
 
 function Sidebar() {
   // h-[80vh] w-full bg-green-200
