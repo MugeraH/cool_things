@@ -9,6 +9,7 @@ export default function Home() {
     "infinite_scroll",
     "wysiwyg_editor",
     "sidebar",
+    "textStream",
   ];
   return (
     <main className=" flex flex-col items-center justify-between py-16 px-10">

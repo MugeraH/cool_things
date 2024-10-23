@@ -157,7 +157,7 @@ const TitleSection = ({ open }: { open: boolean }) => {
                 transition={{ delay: 0.125 }}
                 className="block text-xs font-semibold text-black"
               >
-                GirlOnFire
+                ManOnFire
               </motion.span>
               <motion.span
                 layout
@@ -185,7 +185,7 @@ const Logo = () => {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}
-      className="grid size-10 shrink-0 place-content-center rounded-md shadow-lg"
+      className="grid size-10 shrink-0 place-content-center rounded-md shadow-lg "
     >
       <svg
         id="logo-35"
