@@ -92,7 +92,7 @@ function Dice() {
             <>
               <div className="shadow-md text-black bg-white h-[200px] w-[200px] rounded-sm p-3 flex justify-center items-center">
                 {" "}
-                <h4 className="text-md font-semibold text-black">?</h4>
+                <h4 className="text-[35px] font-semibold text-black">?</h4>
               </div>
             </>
           )}
