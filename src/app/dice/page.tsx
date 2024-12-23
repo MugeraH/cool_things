@@ -71,19 +71,21 @@ function Dice() {
         {isRolling ? (
           <button
             onClick={rollDice}
-            className="border-2 border-transparent hover:border-white transition-all font-semibold text-sm  px-6 py-2 rounded-sm w-[150px] flex items-center justify-center"
+            className="border-2 border-white transition-all font-semibold text-sm  px-6 py-2 rounded-sm w-[150px] flex items-center justify-center"
           >
             <SvgLoader />
           </button>
         ) : (
           <button
             onClick={rollDice}
-            className="border-2 border-transparent hover:border-white transition-all font-semibold text-sm  px-6 py-2 rounded-sm w-[150px]"
+            className="border-2 border-white transition-all font-semibold text-sm  px-6 py-2 rounded-sm w-[150px]"
           >
             Roll Dice
           </button>
         )}
       </div>
+
+      <div>{number}</div>
     </div>
   );
 }
