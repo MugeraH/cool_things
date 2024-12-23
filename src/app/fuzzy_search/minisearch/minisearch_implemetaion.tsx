@@ -4,6 +4,8 @@ import Image from "next/image";
 import React from "react";
 // @ts-ignore
 import MiniSearch from "minisearch";
+import { Search } from "lucide-react";
+import SearchInput from "@/components/SearchInput";
 
 const heroData = [
   {
@@ -145,14 +147,11 @@ function FuzzySearch() {
       </div>
 
       <div className="">
-        <input
-          type="text"
-          className="py-2 px-4 block w-full text-white border text-md bg-transparent border-slate-400 focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
-          placeholder="Search hero"
-          value={inputValue}
-          onChange={(e) => {
-            setInputValue(e.target.value);
+        <SearchInput
+          onChange={(text) => {
+            setInputValue(text);
           }}
+          placeholder="Search hero"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">

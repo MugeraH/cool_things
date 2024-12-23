@@ -10,6 +10,9 @@ export default function Home() {
     "wysiwyg_editor",
     "sidebar",
     "textStream",
+    "react-hooks",
+    "zustand",
+    "dice"
   ];
   return (
     <main className=" flex flex-col items-center justify-between py-16 px-10">

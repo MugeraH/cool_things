@@ -33,7 +33,7 @@ function EditorV2({}: Props) {
             <CardContent className="text-white">
               <h2 className="pt-2">Content Preview</h2>
 
-              <div>{`${value}`}</div>
+              {/* <div>{`${value}`}</div> */}
               <div
                 className="prose lg:prose-xl prose-headings:text-white text-white"
                 dangerouslySetInnerHTML={{ __html: renderContent(value) }}
