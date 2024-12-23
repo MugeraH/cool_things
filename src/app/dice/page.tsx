@@ -44,7 +44,7 @@ function Dice() {
               )}
 
               {number == 6 && (
-                <DiceSpotComponent className={"top-[42%] left-[42%]"} />
+                <DiceSpotComponent className={"top-[42%] left-3"} />
               )}
 
               {number == 6 && (
