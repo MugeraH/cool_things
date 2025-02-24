@@ -55,7 +55,7 @@ function TextStream() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <div>
           <div className="h-[600px] overflow-y-auto bg-white text-slate-950 p-3 rounded-sm text-sm">
             {text}

@@ -12,7 +12,9 @@ export default function Home() {
     "textStream",
     "react-hooks",
     "zustand",
-    "dice"
+    "dice",
+    "otpLogin",
+    "ask_away",
   ];
   return (
     <main className=" flex flex-col items-center justify-between py-16 px-10">
